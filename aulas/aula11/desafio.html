@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+    <style>
+        #res {
+            width: 100vw;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    <label for="itxtpais">Em que país você mora?</label>
+    <input type="text" name="txtpais" id="itxtpais" placeholder="Ex: BRA, USA, FRA...">
+    <input type="button" value="Enviar" id="inpenviar">
+    <div id="res"></div>
+
+    <script>
+        var env = document.querySelector('input#inpenviar')
+        
+        env.addEventListener('click', enviar)
+        
+        function enviar() {
+            var pais = document.getElementById('itxtpais')
+            var pais = String(pais.value)
+            var res = document.querySelector('div#res')
+            if (pais != 'BRA') {
+                res.innerText = `você é estrangeiro`
+            }
+            else {
+                res.innerText = `Você é Brasileiro!`
+            }
+        }
+
+    </script>
+</body>
+</html>

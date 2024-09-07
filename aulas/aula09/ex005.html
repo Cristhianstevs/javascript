@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        body {
+            background-color: #3a81dd;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com Dom</h1>
+    <p>Aqui vai o resultado!</p>
+    <p>Aprendendo a usar <strong>Dom</strong> em JavaScript</p>
+    <div id="clique">Clique em mim!</div>
+    <br>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var d1 = window.document.getElementById('clique')
+        var d = window.document.querySelector('div#clique')
+        window.document.write('*** O primero parágrafo está escrito assim: ' + p1.innerText + '. Usando JavaScript com "getElementsByTagName()[0]"')
+        window.document.write('<br> <br>')
+        window.document.write('*** A div está escrito: ' + d1.innerText)
+            // Textando os dois tipos "querySelector" (d) e "getElementById" (d1)
+            d1.style.color = 'Orange'
+            d1.style.padding = '5px'
+            d.style.background = '#3a61dd'
+            d.style.width = '120px'
+    </script>
+</body>
+</html>

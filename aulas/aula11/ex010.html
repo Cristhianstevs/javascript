@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        #res {
+            width: 100vw;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <label for="ivel">Qual a sua velocidade?</label>
+    <input type="number" name="txtvel" id="itxtvel" placeholder="Velocidade em KM/s">
+    <input type="button" value="Enviar">
+    <div id="res"></div>
+
+    <script>
+        var env = document.getElementsByTagName('input')[1]
+        
+        env.addEventListener('click', enviar)
+        
+        function enviar() {
+            var vel = document.querySelector('input#itxtvel')
+            var res = document.querySelector('div#res')
+            var vel = Number(vel.value)
+            
+            if (vel > 90) {
+                res.innerText = `Com a velocidade de ${vel}km/s, você está multado!`
+            }
+            else {
+                res.innerText = `Com a velocidade de ${vel}km/s, você não está multado, Dirija com atenção.`
+            }
+        }
+    </script>
+</body>
+</html>

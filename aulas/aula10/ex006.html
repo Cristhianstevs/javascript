@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        #area {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #52b152;
+            color: #fff;
+            text-align: center;
+            line-height: 200px;
+                height: 200px;
+                width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()" ondblclick="clicar2()" onmousedown="ações()">
+        Interaja...
+    </div>
+    <script>
+        // Colocar a variável do lado de fora da function faz com que a variável funcione em todas as functions.
+        var a = document.getElementById('area')
+
+        // Podemos colocar os eventos listados aqui para não poluir o HTML.
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseout', sair)
+        a.addEventListener('dblclick', clicar2)
+        
+        function entrar() {
+            a.innerText = 'É Dentro! Tente Clicar'
+            a.style.backgroundColor = '#3a81dd'
+        }
+        function clicar() {
+            a.innerText = 'Clicou! Tente Duble Click'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.backgroundColor = '#ff3333'
+        }
+        function clicar2() {
+            a.innerText = 'Clicou duas vezes!'
+        }
+        function ações() {
+            a.innerText = 'Apertou!'
+        }
+    </script>
+</body>
+</html>
