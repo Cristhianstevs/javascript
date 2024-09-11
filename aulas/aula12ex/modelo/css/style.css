@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+body {
+    background-color: #2a78ee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+header, footer, a {
+    color: #fff;
+    text-align: center;
+}
+
+main section {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    width: 80vw;
+    margin: auto;
+    box-shadow: 0 0 5px 2px #00000030;
+}
+main section p {
+    padding: 10px;
+}
+
+footer {
+    font-weight: 100;
+}
+footer a {
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (width > 500px) {
+    
+    main section {
+        width: 400px;
+    }
+
+}
