@@ -3,6 +3,7 @@ function carregar(){
     var img = document.getElementById('img')
     var data = new Date()
     var hora = data.getHours()
+    // var hora = 22
     
     if (hora >= 6 && hora < 12) {
         var acenar = 'Bom dia!'
