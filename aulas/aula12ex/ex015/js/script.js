@@ -1,7 +1,7 @@
 function verificar() {
     var data = new Date()
     var anoAtual = data.getFullYear()
-    var anoDigitado = document.getElementById('txtano')
+    var anoDigitado = document.querySelector('input#txtano')
     var res = document.querySelector('div#res')
 
     if (anoDigitado.value.lenght == 0 || Number(anoDigitado.value) > anoAtual) {
