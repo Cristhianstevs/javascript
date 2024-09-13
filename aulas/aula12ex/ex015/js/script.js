@@ -1,0 +1,86 @@
+function verificar() {
+    var data = new Date()
+    var anoAtual = data.getFullYear()
+    var anoDigitado = document.getElementById('txtano')
+    var res = document.querySelector('div#res')
+
+    if (anoDigitado.value.lenght == 0 || Number(anoDigitado.value) > anoAtual) {
+        window.alert('[Erro] Verifique os dados e tente novamente. Ou espere até nascer.')
+    }
+    else {
+        var fsex = document.getElementsByName('radsex')
+        var idade = anoAtual - Number(anoDigitado.value)
+        var genero = ''
+        var img = document.createElement('img')
+        img.setAttribute('id', 'foto')
+        
+        if (fsex[0].checked) {
+
+            if (idade >= 0 && idade < 6 ) {
+                // bebe
+                genero = 'Bebe'
+                img.setAttribute('src', 'img/m_bebe.png')
+            }
+            else if (idade < 12) {
+                // Criança
+                genero = 'Criança'
+                img.setAttribute('src', 'img/m_crianca.png')
+            }
+            else if (idade < 18) {
+                // Adolescente
+                genero = 'Adolescente'
+                img.setAttribute('src', 'img/m_adoles.png')
+            }
+            else if (idade < 60) {
+                // Adulto
+                genero = 'Adulto'
+                img.setAttribute('src', 'img/m_adulto.png')
+            }
+            else if (idade < 120) {
+                // Velho
+                genero = 'Idoso'
+                img.setAttribute('src', 'img/m_idoso.png')
+            }
+            else {
+                genero = 'pessoa'
+                img.setAttribute('src', 'img/gato_meme_err.png')
+            }
+        }
+        else if (fsex[1].checked) {
+            genero = 'Mulher'
+            
+            if (idade >= 0 && idade < 6 ) {
+                // bebe
+                genero = 'Bebe'
+                img.setAttribute('src', 'img/f_bebe.png')
+            }
+            else if (idade < 12) {
+                // Criança
+                genero = 'Criança'
+                img.setAttribute('src', 'img/f_crianca.png')
+            }
+            else if (idade < 18) {
+                // Adolescente
+                genero = 'Adolescente'
+                img.setAttribute('src', 'img/f_adoles.png')
+            }
+            else if (idade < 60) {
+                // Adulto
+                genero = 'Adulto'
+                img.setAttribute('src', 'img/f_adulto.png')
+            }
+            else if (idade < 120) {
+                // Velho
+                genero = 'Idosa'
+                img.setAttribute('src', 'img/f_idoso.png')
+            }
+            else {
+                genero = 'pessoa'
+                img.setAttribute('src', 'img/gato_meme_err.png')
+            }
+        }
+        res.style.textAlign = 'center'
+        res.innerHTML = `<p> Detectamos um(a) ${genero} de ${idade} anos </p>`
+        res.appendChild(img)
+    }
+}
