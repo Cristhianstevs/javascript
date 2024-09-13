@@ -23,7 +23,7 @@ main section {
     text-align: center;
 }
 main section #msg p {
-    font-size: 4vw;
+    font-size: 5vw;
 }
 main section .foto img {
     width: 60vw;
@@ -81,7 +81,7 @@ footer a {
         height: 400px;
     }
     main section #msg p {
-        font-size: 20px;
+        font-size: 25px;
     }
     main section .foto img {
         width: 300px;
