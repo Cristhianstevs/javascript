@@ -4,17 +4,20 @@ function verificar() {
     var anoDigitado = document.querySelector('input#txtano')
     var res = document.querySelector('div#res')
 
-    if (anoDigitado.value.length == 0 || Number(anoDigitado.value) > anoAtual) {
-        window.alert('[Erro] Verifique os dados e tente novamente. Ou espere até nascer.')
+    if (anoDigitado.value.length == 0) {
+        window.alert('[Erro] Verifique os dados e tente novamente.')
+    }
+    else if (Number(anoDigitado.value) > anoAtual) {
+        window.alert('Espere até nascer.')
     }
     else {
-        var fsex = document.getElementsByName('radsex')
+        var escolhaSexo = document.getElementsByName('radsex')
         var idade = anoAtual - Number(anoDigitado.value)
         var genero = ''
         var img = document.createElement('img')
         img.setAttribute('id', 'foto')
         
-        if (fsex[0].checked) {
+        if (escolhaSexo[0].checked) {
 
             if (idade >= 0 && idade < 6 ) {
                 // bebe
@@ -46,7 +49,7 @@ function verificar() {
                 img.setAttribute('src', 'img/gato_meme_err.png')
             }
         }
-        else if (fsex[1].checked) {
+        else if (escolhaSexo[1].checked) {
             genero = 'Mulher'
             
             if (idade >= 0 && idade < 6 ) {
