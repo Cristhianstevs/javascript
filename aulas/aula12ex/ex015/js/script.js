@@ -87,3 +87,18 @@ function verificar() {
         res.appendChild(img)
     }
 }
+
+/* SINTAXE */
+
+/* 
+ 
+--- setAttribue --- 
+
+element.setAttribute('atributo', 'valor');
+
+--- appendChild ---
+
+parentNode.appendChild(childNode);
+
+
+*/ 
