@@ -9,31 +9,6 @@ while (comerFatia > 0) { // Enquanto comerFatia for maior que zero, faça
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 var comerFatia = 8
 
