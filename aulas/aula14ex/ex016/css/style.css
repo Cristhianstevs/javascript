@@ -18,14 +18,14 @@ header h1 {
 
 main section {
     background-color: #e0e0e0;
-    min-height: 350px;
     border-radius: 10px;
+    padding: 10px;
     width: 80vw;
     margin: auto;
     box-shadow: 0 0 5px 2px #00000030;
 }
 main section p {
-    padding: 10px;
+    padding: 5px 10px;
 }
 
 footer {
