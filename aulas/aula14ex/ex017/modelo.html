@@ -9,15 +9,21 @@
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Tabuada</h1>
     </header>
     <main>
         <section>
             <div>
-
+                <p>
+                    <label for="numero_tabuada">Número</label>
+                    <input type="number" name="numero_tabuada" id="numero_tabuada">
+                    <input type="button" value="Gerar Tabuada" onclick="gerarTabuada()">
+                </p>
             </div>
-            <div>
-
+            <div class="bloco-resultado">
+                <p class="resultado">
+                    Gerando tabuada...
+                </p>
             </div>
         </section>
     </main>

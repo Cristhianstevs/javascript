@@ -27,6 +27,13 @@ main section {
 main section p {
     padding: 10px;
 }
+main section .bloco-resultado {
+    margin: auto;
+    text-align: center;
+    background-color: #fff;
+    width: 200px;
+    min-height: 240px;
+}
 
 footer {
     font-weight: 100;
