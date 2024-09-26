@@ -16,14 +16,14 @@
             <div>
                 <p>
                     <label for="numero_tabuada">Número</label>
-                    <input type="number" name="numero_tabuada" id="numero_tabuada">
+                    <input type="number" name="numero_tabuada" id="numero_tabuada" placeholder="Digite um número">
                     <input type="button" value="Gerar Tabuada" onclick="gerarTabuada()">
                 </p>
             </div>
             <div class="bloco-resultado">
-                <p class="resultado">
-                    Gerando tabuada...
-                </p>
+                <select name="tabuada" id="seltab" class="resultado" size="10">
+                    <option>Gerando tabuada...</option>
+                </select>
             </div>
         </section>
     </main>

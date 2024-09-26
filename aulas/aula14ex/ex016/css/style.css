@@ -4,8 +4,12 @@ body {
     background-color: #2a78ee;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
+section div p input {
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+    outline: none;
+}
 
 header, footer, a {
     color: #fff;
