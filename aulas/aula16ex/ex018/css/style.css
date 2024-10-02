@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+body {
+    background-color: #2a78ee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+header, footer, a {
+    color: #fff;
+    text-align: center;
+}
+
+header h1 {
+    font-size: clamp(2.5rem, 6vw, 3rem);
+}
+
+main section {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0 0 5px 2px #00000030;
+}
+main section div .block-select {
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+main section p {
+    margin-top: 0;
+}
+main section p select {
+    display: block;
+    width: 180px;
+    height: 200px;
+    padding: 3px;
+}
+
+footer {
+    font-weight: 100;
+}
+footer a {
+    text-decoration: none;
+}
+
+
+
+@media (width > 500px) {
+    
+    main section {
+        width: 460px;
+    }
+
+}
